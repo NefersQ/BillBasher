@@ -1,4 +1,4 @@
-# Bill Basher
+# Bill Basher application
 
 Bill Basher is an application for splitting expenses.
 
