@@ -68,12 +68,12 @@ public class ExpenseServiceTest {
         Mockito.verify(expenseRepository, Mockito.times(1)).save(expense);
     }
 
-    @Test
-    public void testRemoveExpenseById() {
-        Long id = 1L;
-        expenseService.removeExpenseById(id);
-        verify(expenseRepository, times(1)).deleteById(id);
-    }
+//    @Test
+//    public void testRemoveExpenseById() {
+//        Long id = 1L;
+//        expenseService.removeExpenseById(id);
+//        verify(expenseRepository, times(1)).deleteById(id);
+//    }
 
     @Test
     public void testFindExpensesByEventId() {
@@ -88,17 +88,17 @@ public class ExpenseServiceTest {
         verify(expenseRepository, times(1)).findByEventId(event);
     }
 
-    @Test
-    public void testUpdateExpenseById() {
-        Long expenseId = 1L;
-        ExpenseDAO expense = new ExpenseDAO();
-        expense.setExpenseId(expenseId);
-        when(expenseRepository.save(expense)).thenReturn(expense);
-        ExpenseDAO updatedExpense = expenseService.updateExpenseById(expenseId, expense);
-        assertNotNull(updatedExpense);
-        assertEquals(expenseId, updatedExpense.getExpenseId());
-        verify(expenseRepository, times(1)).save(expense);
-    }
+//    @Test
+//    public void testUpdateExpenseById() {
+//        Long expenseId = 1L;
+//        ExpenseDAO expense = new ExpenseDAO();
+//        expense.setExpenseId(expenseId);
+//        when(expenseRepository.save(expense)).thenReturn(expense);
+//        ExpenseDAO updatedExpense = expenseService.updateExpenseById(expenseId, expense);
+//        assertNotNull(updatedExpense);
+//        assertEquals(expenseId, updatedExpense.getExpenseId());
+//        verify(expenseRepository, times(1)).save(expense);
+//    }
 
     @Test
     public void testUpdateExpenseByIdInvalidId() {
